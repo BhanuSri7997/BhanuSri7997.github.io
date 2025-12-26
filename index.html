@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhanu Sri | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Smooth Scroll & Fade-in Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Smooth scroll for internal links
+      const links = document.querySelectorAll('a[href^="#"]');
+      links.forEach(link => {
+        link.addEventListener("click", e => {
+          e.preventDefault();
+          document.querySelector(link.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+          });
+        });
+      });
+
+      // Fade-in animation on scroll using IntersectionObserver
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add("fade-in");
+        });
+      }, { threshold: 0.18 });
+
+      document.querySelectorAll(".fade-section").forEach(sec => observer.observe(sec));
+    });
+  </script>
+</head>
+
+<body>
+  <!-- ===== Header / Sticky Navbar ===== -->
+  <header class="header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <div class="logo">Bhanu Sri</div>
+      <ul class="nav-links" role="list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Hero / Profile Section ===== -->
+  <section id="home" class="section hero fade-section" aria-labelledby="home-heading">
+    <div class="hero-content">
+      <img src="images/profile.jpg" alt="Bhanu Sri Appana — profile photo" class="profile-pic">
+      <div class="hero-text">
+        <h1 id="home-heading">Hello, I’m <span>Bhanu Sri Appana</span></h1>
+        <p>
+          A dedicated B.Tech student passionate about software development, algorithms, and design thinking.
+          I build clean, efficient solutions and enjoy solving real problems through code and good UX.
+        </p>
+
+        <!-- Primary CTA -->
+        <div class="hero-actions">
+          <a href="#contact" class="btn">Get in Touch</a>
+
+          <!-- Coding Profiles -->
+          <div class="profiles" aria-label="Coding profiles">
+            <a class="profile-link" href="https://github.com/BhanuSri7997" target="_blank" rel="noopener" aria-label="GitHub — opens in new tab">GitHub</a>
+            <a class="profile-link" href="https://leetcode.com/u/Bhanu_Sri_A/" target="_blank" rel="noopener" aria-label="LeetCode — opens in new tab">LeetCode</a>
+            <a class="profile-link" href="https://www.codechef.com/users/bhanu_sri_a" target="_blank" rel="noopener" aria-label="CodeChef — opens in new tab">CodeChef</a>
+            <a class="profile-link" href="https://www.hackerrank.com/profile/bhanusriappana10" target="_blank" rel="noopener" aria-label="HackerRank — opens in new tab">HackerRank</a>
+            <a class="profile-link" href="https://www.linkedin.com/in/bhanu-sri-appana-b61b76290/" target="_blank" rel="noopener" aria-label="LinkedIn — opens in new tab">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Projects Section ===== -->
+  <section id="projects" class="section fade-section" aria-labelledby="projects-heading">
+    <h2 id="projects-heading" class="section-title">Projects</h2>
+    <div class="project-grid" role="list">
+      <div class="project-card" role="listitem">
+        <h3>Health Cure</h3>
+        <p>Helps everyone find the right doctor for their health problem with filters and ratings.</p>
+      </div>
+      <div class="project-card" role="listitem">
+        <h3>Digital Visiting Card</h3>
+        <p>A professional digital visiting card designed with responsive HTML &amp; CSS.</p>
+      </div>
+      <div class="project-card" role="listitem">
+        <h3>Mini-Calculator</h3>
+        <p>A compact calculator interface built using HTML, CSS and lightweight JavaScript.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Skills Section ===== -->
+  <section id="skills" class="section fade-section" aria-labelledby="skills-heading">
+    <h2 id="skills-heading" class="section-title">Skills</h2>
+    <div class="skills-container" role="list">
+      <div class="skill-tag" role="listitem">C</div>
+      <div class="skill-tag" role="listitem">Python</div>
+      <div class="skill-tag" role="listitem">Java</div>
+      <div class="skill-tag" role="listitem">HTML</div>
+      <div class="skill-tag" role="listitem">CSS</div>
+      <div class="skill-tag" role="listitem">MySQL</div>
+      <div class="skill-tag" role="listitem">DBMS</div>
+      <div class="skill-tag" role="listitem">Problem Solving</div>
+    </div>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact" class="section fade-section" aria-labelledby="contact-heading">
+    <h2 id="contact-heading" class="section-title">Contact Me</h2>
+    <form class="contact-form" action="#" method="post" aria-label="Contact form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="footer-inner">
+      <div class="footer-profiles">
+        <a class="profile-link compact" href="https://github.com/BhanuSri7997" target="_blank" rel="noopener">GitHub</a>
+        <a class="profile-link compact" href="https://leetcode.com/u/Bhanu_Sri_A/" target="_blank" rel="noopener">LeetCode</a>
+        <a class="profile-link compact" href="https://www.codechef.com/users/bhanu_sri_a" target="_blank" rel="noopener">CodeChef</a>
+        <a class="profile-link compact" href="https://www.hackerrank.com/profile/bhanusriappana10" target="_blank" rel="noopener">HackerRank</a>
+        <a class="profile-link compact" href="https://www.linkedin.com/in/bhanu-sri-appana-b61b76290/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <p>© 2025 Bhanu Sri | Designed with 💜</p>
+    </div>
+  </footer>
+</body>
+</html>
