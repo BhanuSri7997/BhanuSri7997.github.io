@@ -40,6 +40,7 @@
 <body>
   <!-- ===== Header / Sticky Navbar ===== -->
   <header class="header">
+
     <nav class="navbar" aria-label="Primary navigation">
       <div class="logo">Bhanu Sri</div>
       <ul class="nav-links" role="list">
@@ -48,6 +49,8 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+
     </nav>
   </header>
 
@@ -115,14 +118,28 @@
 
   <!-- ===== Contact Section ===== -->
   <section id="contact" class="section fade-section" aria-labelledby="contact-heading">
-    <h2 id="contact-heading" class="section-title">Contact Me</h2>
-    <form class="contact-form" action="#" method="post" aria-label="Contact form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </section>
+  <h2 id="contact-heading" class="section-title">Contact Me</h2>
+
+  <form 
+    class="contact-form" 
+    action="https://formspree.io/f/xzdjygnz" 
+    method="POST"
+  >
+    
+    <input type="text" name="name" placeholder="Your Name" required />
+
+    <input type="email" name="email" placeholder="Your Email" required />
+
+    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+
+    <!-- Hidden fields (improves email format) -->
+    <input type="hidden" name="_subject" value="New Portfolio Contact!" />
+    <input type="hidden" name="_replyto" value="email" />
+
+    <button type="submit" class="btn">Send Message</button>
+
+  </form>
+</section>
 
   <!-- ===== Footer ===== -->
   <footer class="footer" aria-label="Site footer">
@@ -137,5 +154,25 @@
       <p>© 2025 Bhanu Sri | Designed with 💜</p>
     </div>
   </footer>
+  <script>
+    const toggleBtn = document.getElementById("theme-toggle");
+
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+      toggleBtn.textContent = "☀️";
+    }
+
+    toggleBtn.onclick = function () {
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+        toggleBtn.textContent = "☀️";
+      } else {
+        localStorage.setItem("theme", "light");
+        toggleBtn.textContent = "🌙";
+      }
+    };
+  </script>
 </body>
 </html>
