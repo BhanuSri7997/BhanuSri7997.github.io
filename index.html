@@ -5,174 +5,339 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bhanu Sri | Portfolio</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- CSS File -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Smooth Scroll & Fade-in Script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // Smooth scroll for internal links
-      const links = document.querySelectorAll('a[href^="#"]');
-      links.forEach(link => {
-        link.addEventListener("click", e => {
-          e.preventDefault();
-          document.querySelector(link.getAttribute("href")).scrollIntoView({
-            behavior: "smooth"
-          });
-        });
-      });
-
-      // Fade-in animation on scroll using IntersectionObserver
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) entry.target.classList.add("fade-in");
-        });
-      }, { threshold: 0.18 });
-
-      document.querySelectorAll(".fade-section").forEach(sec => observer.observe(sec));
-    });
-  </script>
+  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-  <!-- ===== Header / Sticky Navbar ===== -->
-  <header class="header">
 
-    <nav class="navbar" aria-label="Primary navigation">
-      <div class="logo">Bhanu Sri</div>
-      <ul class="nav-links" role="list">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+<!-- ===== NAVBAR ===== -->
+<header class="header">
+  <nav class="navbar">
+    <div class="logo">Bhanu Sri</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#profiles">Profiles</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="theme-toggle">🌙</button>
+  </nav>
+</header>
 
-    </nav>
-  </header>
+<!-- ===== HERO ===== -->
+<section id="home" class="section hero">
+  <div class="hero-image">
+  <img src="images/profile.jpg" alt="Bhanu Sri">
+</div>
 
-  <!-- ===== Hero / Profile Section ===== -->
-  <section id="home" class="section hero fade-section" aria-labelledby="home-heading">
-    <div class="hero-content">
-      <img src="images/profile.jpg" alt="Bhanu Sri Appana — profile photo" class="profile-pic">
-      <div class="hero-text">
-        <h1 id="home-heading">Hello, I’m <span>Bhanu Sri Appana</span></h1>
-        <p>
-          A dedicated B.Tech student passionate about software development, algorithms, and design thinking.
-          I build clean, efficient solutions and enjoy solving real problems through code and good UX.
-        </p>
+  <div class="hero-text">
+    <!-- <h1>Hi, I'm <span>Bhanu Sri</span></h1> -->
+    <h1>Hi, I'm <span id="typing"></span></h1>
 
-        <!-- Primary CTA -->
-        <div class="hero-actions">
-          <a href="#contact" class="btn">Get in Touch</a>
+    <p>
+      <strong>Java Developer | DSA Enthusiast | Problem Solver</strong><br><br>
+      I build efficient applications using Java, SQL, and Web Technologies.
+      Passionate about solving real-world problems and continuously improving my skills.
+    </p>
 
-          <!-- Coding Profiles -->
-          <div class="profiles" aria-label="Coding profiles">
-            <a class="profile-link" href="https://github.com/BhanuSri7997" target="_blank" rel="noopener" aria-label="GitHub — opens in new tab">GitHub</a>
-            <a class="profile-link" href="https://leetcode.com/u/Bhanu_Sri_A/" target="_blank" rel="noopener" aria-label="LeetCode — opens in new tab">LeetCode</a>
-            <a class="profile-link" href="https://www.codechef.com/users/bhanu_sri_a" target="_blank" rel="noopener" aria-label="CodeChef — opens in new tab">CodeChef</a>
-            <a class="profile-link" href="https://www.hackerrank.com/profile/bhanusriappana10" target="_blank" rel="noopener" aria-label="HackerRank — opens in new tab">HackerRank</a>
-            <a class="profile-link" href="https://www.linkedin.com/in/bhanu-sri-appana-b61b76290/" target="_blank" rel="noopener" aria-label="LinkedIn — opens in new tab">LinkedIn</a>
-          </div>
-        </div>
-      </div>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn">Contact Me</a>
+
+      <!-- 🔥 RESUME BUTTON -->
+      <a href="resume.pdf" class="btn-outline" download>
+        Download Resume
+      </a>
+      <!-- // Put your resume file in project folder and name it resume.pdf -->
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== Projects Section ===== -->
-  <section id="projects" class="section fade-section" aria-labelledby="projects-heading">
-    <h2 id="projects-heading" class="section-title">Projects</h2>
-    <div class="project-grid" role="list">
-      <div class="project-card" role="listitem">
-        <h3>Health Cure</h3>
-        <p>Helps everyone find the right doctor for their health problem with filters and ratings.</p>
-      </div>
-      <div class="project-card" role="listitem">
-        <h3>Digital Visiting Card</h3>
-        <p>A professional digital visiting card designed with responsive HTML &amp; CSS.</p>
-      </div>
-      <div class="project-card" role="listitem">
-        <h3>Mini-Calculator</h3>
-        <p>A compact calculator interface built using HTML, CSS and lightweight JavaScript.</p>
-      </div>
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="section">
+  <h2 class="section-title">Projects</h2>
+
+  <div class="project-grid">
+
+    <!-- PROJECT 1 -->
+    <div class="project-card" onclick="window.open('https://github.com/BhanuSri7997/health-cure', '_blank')">
+      <!-- // Replace YOUR_USERNAME + repo name -->
+      <img src="images/health-cure.png" alt="Health Cure">
+      <h3>Health Cure</h3>
+      <p>
+        Built a platform to find doctors based on health issues using filters and ratings.
+    Improved accessibility by categorizing doctors based on specialization.
+      </p>
     </div>
-  </section>
 
-  <!-- ===== Skills Section ===== -->
-  <section id="skills" class="section fade-section" aria-labelledby="skills-heading">
-    <h2 id="skills-heading" class="section-title">Skills</h2>
-    <div class="skills-container" role="list">
-      <div class="skill-tag" role="listitem">C</div>
-      <div class="skill-tag" role="listitem">Python</div>
-      <div class="skill-tag" role="listitem">Java</div>
-      <div class="skill-tag" role="listitem">HTML</div>
-      <div class="skill-tag" role="listitem">CSS</div>
-      <div class="skill-tag" role="listitem">MySQL</div>
-      <div class="skill-tag" role="listitem">DBMS</div>
-      <div class="skill-tag" role="listitem">Problem Solving</div>
+    <!-- PROJECT 2 -->
+    <div class="project-card" onclick="window.open('https://github.com/BhanuSri7997/Digital-Visiting-Card.git', '_blank')">
+      <!-- // Replace link -->
+      <img src="images/digital-card.png" alt="Digital Visiting Card">
+      <h3>Digital Visiting Card</h3>
+      <p>
+        Designed a responsive digital visiting card using HTML and CSS.
+    Showcases personal details in a clean and modern UI layout.
+      </p>
     </div>
-  </section>
 
-  <!-- ===== Contact Section ===== -->
-  <section id="contact" class="section fade-section" aria-labelledby="contact-heading">
-  <h2 id="contact-heading" class="section-title">Contact Me</h2>
+    <!-- PROJECT 3 -->
+    <div class="project-card" onclick="window.open('https://github.com/BhanuSri7997/calculator', '_blank')">
+      <!-- // Replace link -->
+      <img src="images/calculator.png" alt="Mini Calculator">
+      <h3>Mini Calculator</h3>
+      <p>
+        Developed a lightweight calculator using JavaScript for real-time arithmetic operations.
+    Implemented interactive UI with instant results for better user experience.
+      </p>
+    </div>
 
-  <form 
-    class="contact-form" 
-    action="https://formspree.io/f/xzdjygnz" 
-    method="POST"
-  >
-    
-    <input type="text" name="name" placeholder="Your Name" required />
+  </div>
+</section>
 
-    <input type="email" name="email" placeholder="Your Email" required />
+<!-- ===== SKILLS ===== -->
+<section id="skills" class="section">
+  <h2 class="section-title">Skills</h2>
 
-    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+  <div>
+  <h3><i class="fa-solid fa-code"></i> Languages</h3>
 
-    <!-- Hidden fields (improves email format) -->
-    <input type="hidden" name="_subject" value="New Portfolio Contact!" />
-    <input type="hidden" name="_replyto" value="email" />
+  <div class="skills-grid">
 
-    <button type="submit" class="btn">Send Message</button>
+    <div class="skill-card">
+      <i class="fa-brands fa-java"></i>
+      <p>Java</p>
+    </div>
 
+    <div class="skill-card">
+      <i class="fa-solid fa-c"></i>
+      <p>C</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-brands fa-python"></i>
+      <p>Python</p>
+    </div>
+
+  </div>
+</div>
+
+    <div>
+  <h3><i class="fa-solid fa-globe"></i> Web</h3>
+
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <i class="fa-brands fa-html5"></i>
+      <p>HTML</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-brands fa-css3-alt"></i>
+      <p>CSS</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-brands fa-js"></i>
+      <p>JavaScript</p>
+    </div>
+
+  </div>
+</div>
+
+    <div>
+  <h3><i class="fa-solid fa-database"></i> Database</h3>
+
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <i class="fa-solid fa-database"></i>
+      <p>MySQL</p>
+    </div>
+
+  </div>
+</div>
+    <div>
+  <h3><i class="fa-solid fa-brain"></i> Core</h3>
+
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <i class="fa-solid fa-code"></i>
+      <p>DSA</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-solid fa-database"></i>
+      <p>DBMS</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-solid fa-microchip"></i>
+      <p>OS</p>
+    </div>
+
+  </div>
+</div>
+
+  </div>
+</section>
+
+<!-- 🔥 ADD HERE -->
+<section id="achievements" class="section">
+  <h2 class="section-title">Achievements</h2>
+
+  <div class="achievements-box">
+
+  <div class="achievement-card">
+    <div>
+      <h3>🥇 First Rank – Maya Portal</h3>
+      <p>
+        Achieved top rank by solving a high volume of programming problems, demonstrating strong problem-solving and consistency.
+      </p>
+    </div>
+  </div>
+
+  <div class="achievement-card">
+    <div>
+      <h3>🏆 Competitive Achievements</h3>
+      <p>
+        Won prizes in quizzes, speeches, and group discussions, showcasing strong communication and teamwork skills.
+      </p>
+    </div>
+  </div>
+
+  <div class="achievement-card">
+    <div>
+      <h3>📚 Academic Excellence</h3>
+      <p>
+        Secured 588/600 in 10th and 903/1000 in Intermediate, reflecting discipline and consistent academic performance.
+      </p>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- CODING PROFILES-->
+<section id="profiles" class="section">
+  <h2 class="section-title">Coding Profiles</h2>
+
+  <div class="profiles-box">
+
+    <a href="https://leetcode.com/Bhanu_Sri_A" target="_blank" class="profile-card">
+      <i class="fa-solid fa-code"></i>
+      <p>LeetCode</p>
+    </a>
+
+    <a href="https://www.hackerrank.com/bhanusriappana10" target="_blank" class="profile-card">
+      <i class="fa-brands fa-hackerrank"></i>
+      <p>HackerRank</p>
+    </a>
+
+    <a href="https://github.com/BhanuSri7997" target="_blank" class="profile-card">
+      <i class="fa-brands fa-github"></i>
+      <p>GitHub</p>
+    </a>
+
+    <a href="https://www.codechef.com/users/bhanu_sri_a" target="_blank" class="profile-card">
+      <i class="fa-solid fa-utensils"></i>
+      <p>CodeChef</p>
+    </a>
+
+    <a href="https://www.codingninjas.com/codestudio/profile/BhanuSriAppana" target="_blank" class="profile-card">
+      <i class="fa-solid fa-laptop-code"></i>
+      <p>Code360</p>
+    </a>
+
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="section">
+  <h2 class="section-title">Contact Me</h2>
+
+  <form action="https://formspree.io/f/xzdjygnz" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send</button>
   </form>
 </section>
 
-  <!-- ===== Footer ===== -->
-  <footer class="footer" aria-label="Site footer">
-    <div class="footer-inner">
-      <div class="footer-profiles">
-        <a class="profile-link compact" href="https://github.com/BhanuSri7997" target="_blank" rel="noopener">GitHub</a>
-        <a class="profile-link compact" href="https://leetcode.com/u/Bhanu_Sri_A/" target="_blank" rel="noopener">LeetCode</a>
-        <a class="profile-link compact" href="https://www.codechef.com/users/bhanu_sri_a" target="_blank" rel="noopener">CodeChef</a>
-        <a class="profile-link compact" href="https://www.hackerrank.com/profile/bhanusriappana10" target="_blank" rel="noopener">HackerRank</a>
-        <a class="profile-link compact" href="https://www.linkedin.com/in/bhanu-sri-appana-b61b76290/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-      <p>© 2025 Bhanu Sri | Designed with 💜</p>
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- LEFT -->
+    <div class="footer-left">
+      <h3>Bhanu Sri</h3>
+      <p>Aspiring Software Engineer passionate about building efficient and scalable applications.</p>
     </div>
-  </footer>
-  <script>
-    const toggleBtn = document.getElementById("theme-toggle");
 
-    if (localStorage.getItem("theme") === "dark") {
-      document.body.classList.add("dark-mode");
-      toggleBtn.textContent = "☀️";
-    }
+    <!-- CENTER -->
+    <div class="footer-center">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#profiles">Profiles</a></li>
+      </ul>
+    </div>
 
-    toggleBtn.onclick = function () {
-      document.body.classList.toggle("dark-mode");
+    <!-- RIGHT -->
+    <div class="footer-right">
+      <h4>Connect</h4>
+      <div class="social-icons">
+        <a href="https://github.com/BhanuSri7997" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/bhanusriappana" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:bhanusriappana10@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
 
-      if (document.body.classList.contains("dark-mode")) {
-        localStorage.setItem("theme", "dark");
-        toggleBtn.textContent = "☀️";
-      } else {
-        localStorage.setItem("theme", "light");
-        toggleBtn.textContent = "🌙";
-      }
-    };
-  </script>
+  </div>
+
+  <p class="footer-bottom">© 2026 Bhanu Sri | All Rights Reserved</p>
+
+</footer>
+
+<!-- ===== DARK MODE ===== -->
+<!-- <script>
+const toggleBtn = document.getElementById("theme-toggle");
+
+toggleBtn.onclick = () => {
+  document.body.classList.toggle("dark-mode");
+};
+</script> -->
+<script>
+const toggleBtn = document.getElementById("theme-toggle");
+
+toggleBtn.onclick = () => {
+  document.body.classList.toggle("dark-mode");
+};
+
+// 🔥 TYPING EFFECT
+const text = "Bhanu Sri";
+let index = 0;
+const speed = 100;
+
+function typeEffect() {
+  if (index < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(index);
+    index++;
+    setTimeout(typeEffect, speed);
+  }
+}
+
+window.onload = typeEffect;
+</script>
+
 </body>
 </html>
+
+
