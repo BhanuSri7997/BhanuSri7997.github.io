@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,333 +12,406 @@
 
 <body>
 
-<!-- ===== NAVBAR ===== -->
-<header class="header">
-  <nav class="navbar">
-    <div class="logo">Bhanu Sri</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#achievements">Achievements</a></li>
-      <li><a href="#profiles">Profiles</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button id="theme-toggle">🌙</button>
-  </nav>
-</header>
-
-<!-- ===== HERO ===== -->
-<section id="home" class="section hero">
-  <div class="hero-image">
-  <img src="images/profile.jpg" alt="Bhanu Sri">
-</div>
-
-  <div class="hero-text">
-    <!-- <h1>Hi, I'm <span>Bhanu Sri</span></h1> -->
-    <h1>Hi, I'm <span id="typing"></span></h1>
-
-    <p>
-      <strong>Java Developer | DSA Enthusiast | Problem Solver</strong><br><br>
-      I build efficient applications using Java, SQL, and Web Technologies.
-      Passionate about solving real-world problems and continuously improving my skills.
-    </p>
-
-    <div class="hero-buttons">
-      <a href="#contact" class="btn">Contact Me</a>
-
-      <!-- 🔥 RESUME BUTTON -->
-      <a href="resume.pdf" class="btn-outline" download>
-        Download Resume
-      </a>
-      <!-- // Put your resume file in project folder and name it resume.pdf -->
-    </div>
-  </div>
-</section>
-
-<!-- ===== PROJECTS ===== -->
-<section id="projects" class="section">
-  <h2 class="section-title">Projects</h2>
-
-  <div class="project-grid">
-
-    <!-- PROJECT 1 -->
-    <div class="project-card" onclick="window.open('https://github.com/BhanuSri7997/health-cure', '_blank')">
-      <!-- // Replace YOUR_USERNAME + repo name -->
-      <img src="images/health-cure.png" alt="Health Cure">
-      <h3>Health Cure</h3>
-      <p>
-        Built a platform to find doctors based on health issues using filters and ratings.
-    Improved accessibility by categorizing doctors based on specialization.
-      </p>
-    </div>
-
-    <!-- PROJECT 2 -->
-    <div class="project-card" onclick="window.open('https://github.com/BhanuSri7997/Digital-Visiting-Card.git', '_blank')">
-      <!-- // Replace link -->
-      <img src="images/digital-card.png" alt="Digital Visiting Card">
-      <h3>Digital Visiting Card</h3>
-      <p>
-        Designed a responsive digital visiting card using HTML and CSS.
-    Showcases personal details in a clean and modern UI layout.
-      </p>
-    </div>
-
-    <!-- PROJECT 3 -->
-    <div class="project-card" onclick="window.open('https://github.com/BhanuSri7997/Mini-Calculator', '_blank')">
-      <!-- // Replace link -->
-      <img src="images/calculator.png" alt="Mini Calculator">
-      <h3>Mini Calculator</h3>
-      <p>
-        Developed a lightweight calculator using JavaScript for real-time arithmetic operations.
-    Implemented interactive UI with instant results for better user experience.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ===== SKILLS ===== -->
-<section id="skills" class="section">
-  <h2 class="section-title">Skills</h2>
-
-  <div>
-  <h3><i class="fa-solid fa-code"></i> Languages</h3>
-
-  <div class="skills-grid">
-
-    <div class="skill-card">
-      <i class="fa-brands fa-java"></i>
-      <p>Java</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fa-solid fa-c"></i>
-      <p>C</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fa-brands fa-python"></i>
-      <p>Python</p>
-    </div>
-
-  </div>
-</div>
-
-    <div>
-  <h3><i class="fa-solid fa-globe"></i> Web</h3>
-
-  <div class="skills-grid">
-
-    <div class="skill-card">
-      <i class="fa-brands fa-html5"></i>
-      <p>HTML</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fa-brands fa-css3-alt"></i>
-      <p>CSS</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fa-brands fa-js"></i>
-      <p>JavaScript</p>
-    </div>
-
-  </div>
-</div>
-
-    <div>
-  <h3><i class="fa-solid fa-database"></i> Database</h3>
-
-  <div class="skills-grid">
-
-    <div class="skill-card">
-      <i class="fa-solid fa-database"></i>
-      <p>MySQL</p>
-    </div>
-
-  </div>
-</div>
-    <div>
-  <h3><i class="fa-solid fa-brain"></i> Core</h3>
-
-  <div class="skills-grid">
-
-    <div class="skill-card">
-      <i class="fa-solid fa-code"></i>
-      <p>DSA</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fa-solid fa-database"></i>
-      <p>DBMS</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fa-solid fa-microchip"></i>
-      <p>OS</p>
-    </div>
-
-  </div>
-</div>
-
-  </div>
-</section>
-
-<!-- 🔥 ADD HERE -->
-<section id="achievements" class="section">
-  <h2 class="section-title">Achievements</h2>
-
-  <div class="achievements-box">
-
-  <div class="achievement-card">
-    <div>
-      <h3>🥇 First Rank – Maya Portal</h3>
-      <p>
-        Achieved top rank by solving a high volume of programming problems, demonstrating strong problem-solving and consistency.
-      </p>
-    </div>
-  </div>
-
-  <div class="achievement-card">
-    <div>
-      <h3>🏆 Competitive Achievements</h3>
-      <p>
-        Won prizes in quizzes, speeches, and group discussions, showcasing strong communication and teamwork skills.
-      </p>
-    </div>
-  </div>
-
-  <div class="achievement-card">
-    <div>
-      <h3>📚 Academic Excellence</h3>
-      <p>
-        Secured 588/600 in 10th and 903/1000 in Intermediate, reflecting discipline and consistent academic performance.
-      </p>
-    </div>
-  </div>
-
-</div>
-</section>
-
-<!-- CODING PROFILES-->
-<section id="profiles" class="section">
-  <h2 class="section-title">Coding Profiles</h2>
-
-  <div class="profiles-box">
-
-    <a href="https://leetcode.com/Bhanu_Sri_A" target="_blank" class="profile-card">
-      <i class="fa-solid fa-code"></i>
-      <p>LeetCode</p>
-    </a>
-
-    <a href="https://www.hackerrank.com/bhanusriappana10" target="_blank" class="profile-card">
-      <i class="fa-brands fa-hackerrank"></i>
-      <p>HackerRank</p>
-    </a>
-
-    <a href="https://github.com/BhanuSri7997" target="_blank" class="profile-card">
-      <i class="fa-brands fa-github"></i>
-      <p>GitHub</p>
-    </a>
-
-    <a href="https://www.codechef.com/users/bhanu_sri_a" target="_blank" class="profile-card">
-      <i class="fa-solid fa-utensils"></i>
-      <p>CodeChef</p>
-    </a>
-
-    <a href="https://www.codingninjas.com/codestudio/profile/BhanuSriAppana" target="_blank" class="profile-card">
-      <i class="fa-solid fa-laptop-code"></i>
-      <p>Code360</p>
-    </a>
-
-  </div>
-</section>
-
-<!-- ===== CONTACT ===== -->
-<section id="contact" class="section">
-  <h2 class="section-title">Contact Me</h2>
-
-  <form action="https://formspree.io/f/xzdjygnz" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit" class="btn">Send</button>
-  </form>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-
-  <div class="footer-container">
-
-    <!-- LEFT -->
-    <div class="footer-left">
-      <h3>Bhanu Sri</h3>
-      <p>Aspiring Software Engineer passionate about building efficient and scalable applications.</p>
-    </div>
-
-    <!-- CENTER -->
-    <div class="footer-center">
-      <h4>Quick Links</h4>
-      <ul>
+  <!-- ===== NAVBAR ===== -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Bhanu Sri</div>
+      <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#achievements">Achievements</a></li>
         <li><a href="#profiles">Profiles</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
+      <button id="theme-toggle">🌙</button>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="section hero">
+    <div class="hero-image">
+      <img src="images/profile.jpg" alt="Bhanu Sri">
     </div>
 
-    <!-- RIGHT -->
-    <div class="footer-right">
-      <h4>Connect</h4>
-      <div class="social-icons">
-        <a href="https://github.com/BhanuSri7997" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/bhanusriappana" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="mailto:bhanusriappana10@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    <div class="hero-text">
+      <!-- <h1>Hi, I'm <span>Bhanu Sri</span></h1> -->
+      <h1>Hi, I'm <span id="typing"></span></h1>
+
+      <p>
+        <strong>Java Developer | DSA Enthusiast | Problem Solver</strong><br><br>
+        I build efficient applications using Java, SQL, and Web Technologies.
+        Passionate about solving real-world problems and continuously improving my skills.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#contact" class="btn">Contact Me</a>
+
+        <!-- 🔥 RESUME BUTTON -->
+        <a href="resume.pdf" class="btn-outline" download>
+          Download Resume
+        </a>
+        <!-- // Put your resume file in project folder and name it resume.pdf -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project-grid">
+
+      <div class="project-card" onclick="window.open('https://github.com/BhanuSri7997/MERN-Job-Portal', '_blank')">
+        <img src="images/job-portal.png" alt="MERN Job Portal">
+
+        <h3>MERN Job Portal</h3>
+
+        <p>
+          Full-stack MERN Job Portal featuring JWT authentication, role-based access, job management, and application
+          tracking.
+        </p>
+      </div>
+
+      <!-- PROJECT 1 -->
+      <div class="project-card" onclick="window.open('https://github.com/BhanuSri7997/health-cure', '_blank')">
+        <!-- // Replace YOUR_USERNAME + repo name -->
+        <img src="images/health-cure.png" alt="Health Cure">
+        <h3>Health Cure</h3>
+        <p>
+          Built a platform to find doctors based on health issues using filters and ratings.
+          Improved accessibility by categorizing doctors based on specialization.
+        </p>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="project-card"
+        onclick="window.open('https://github.com/BhanuSri7997/Digital-Visiting-Card.git', '_blank')">
+        <!-- // Replace link -->
+        <img src="images/digital-card.png" alt="Digital Visiting Card">
+        <h3>Digital Visiting Card</h3>
+        <p>
+          Designed a responsive digital visiting card using HTML and CSS.
+          Showcases personal details in a clean and modern UI layout.
+        </p>
+      </div>
+
+      <!-- PROJECT 3 -->
+      <div class="project-card" onclick="window.open('https://github.com/BhanuSri7997/Mini-Calculator', '_blank')">
+        <!-- // Replace link -->
+        <img src="images/calculator.png" alt="Mini Calculator">
+        <h3>Mini Calculator</h3>
+        <p>
+          Developed a lightweight calculator using JavaScript for real-time arithmetic operations.
+          Implemented interactive UI with instant results for better user experience.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section">
+    <h2 class="section-title">Skills</h2>
+
+    <!-- Languages -->
+    <div>
+      <h3><i class="fa-solid fa-code"></i> Languages</h3>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fa-brands fa-java"></i>
+          <p>Java</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-c"></i>
+          <p>C</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-brands fa-python"></i>
+          <p>Python</p>
+        </div>
       </div>
     </div>
 
-  </div>
+    <!-- Web -->
+    <div>
+      <h3><i class="fa-solid fa-globe"></i> Web</h3>
 
-  <p class="footer-bottom">© 2026 Bhanu Sri | All Rights Reserved</p>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fa-brands fa-html5"></i>
+          <p>HTML</p>
+        </div>
 
-</footer>
+        <div class="skill-card">
+          <i class="fa-brands fa-css3-alt"></i>
+          <p>CSS</p>
+        </div>
 
-<!-- ===== DARK MODE ===== -->
-<!-- <script>
+        <div class="skill-card">
+          <i class="fa-brands fa-js"></i>
+          <p>JavaScript</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-brands fa-react"></i>
+          <p>React.js</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Backend -->
+    <div>
+      <h3><i class="fa-solid fa-server"></i> Backend</h3>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fa-brands fa-node-js"></i>
+          <p>Node.js</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-network-wired"></i>
+          <p>Express.js</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Database -->
+    <div>
+      <h3><i class="fa-solid fa-database"></i> Database</h3>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fa-solid fa-database"></i>
+          <p>MySQL</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-leaf"></i>
+          <p>MongoDB</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core -->
+    <div>
+      <h3><i class="fa-solid fa-brain"></i> Core</h3>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fa-solid fa-code"></i>
+          <p>DSA</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-database"></i>
+          <p>DBMS</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-microchip"></i>
+          <p>OS</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div>
+      <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools</h3>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fa-brands fa-git-alt"></i>
+          <p>Git</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-brands fa-github"></i>
+          <p>GitHub</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-code"></i>
+          <p>VS Code</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-paper-plane"></i>
+          <p>Postman</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 🔥 ADD HERE -->
+  <section id="achievements" class="section">
+    <h2 class="section-title">Achievements</h2>
+
+    <div class="achievements-box">
+
+      <div class="achievement-card">
+        <div>
+          <h3>🥇 First Rank – Maya Portal</h3>
+          <p>
+            Achieved top rank by solving a high volume of programming problems, demonstrating strong problem-solving and
+            consistency.
+          </p>
+        </div>
+      </div>
+
+      <div class="achievement-card">
+        <div>
+          <h3>🏆 College Topper – Code360 (May)</h3>
+          <p>
+            Recognized as the College Topper on Code360 for the month of May by consistently solving coding challenges
+            and securing the highest position on the college leaderboard.
+          </p>
+        </div>
+      </div>
+
+      <div class="achievement-card">
+        <div>
+          <h3>🏆 Competitive Achievements</h3>
+          <p>
+            Won prizes in quizzes, speeches, and group discussions, showcasing strong communication and teamwork skills.
+          </p>
+        </div>
+      </div>
+
+      <div class="achievement-card">
+        <div>
+          <h3>📚 Academic Excellence</h3>
+          <p>
+            Secured 588/600 in 10th and 903/1000 in Intermediate, reflecting discipline and consistent academic
+            performance.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CODING PROFILES-->
+  <section id="profiles" class="section">
+    <h2 class="section-title">Coding Profiles</h2>
+
+    <div class="profiles-box">
+
+      <a href="https://leetcode.com/Bhanu_Sri_A" target="_blank" class="profile-card">
+        <i class="fa-solid fa-code"></i>
+        <p>LeetCode</p>
+      </a>
+
+      <a href="https://www.hackerrank.com/bhanusriappana10" target="_blank" class="profile-card">
+        <i class="fa-brands fa-hackerrank"></i>
+        <p>HackerRank</p>
+      </a>
+
+      <a href="https://github.com/BhanuSri7997" target="_blank" class="profile-card">
+        <i class="fa-brands fa-github"></i>
+        <p>GitHub</p>
+      </a>
+
+      <a href="https://www.codechef.com/users/bhanu_sri_a" target="_blank" class="profile-card">
+        <i class="fa-solid fa-utensils"></i>
+        <p>CodeChef</p>
+      </a>
+
+      <a href="https://www.codingninjas.com/codestudio/profile/BhanuSriAppana" target="_blank" class="profile-card">
+        <i class="fa-solid fa-laptop-code"></i>
+        <p>Code360</p>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <h2 class="section-title">Contact Me</h2>
+
+    <form action="https://formspree.io/f/xzdjygnz" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+
+    <div class="footer-container">
+
+      <!-- LEFT -->
+      <div class="footer-left">
+        <h3>Bhanu Sri</h3>
+        <p>Aspiring Software Engineer passionate about building efficient and scalable applications.</p>
+      </div>
+
+      <!-- CENTER -->
+      <div class="footer-center">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#profiles">Profiles</a></li>
+        </ul>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="footer-right">
+        <h4>Connect</h4>
+        <div class="social-icons">
+          <a href="https://github.com/BhanuSri7997" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/bhanusriappana" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:bhanusriappana10@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="footer-bottom">© 2026 Bhanu Sri | All Rights Reserved</p>
+
+  </footer>
+
+  <!-- ===== DARK MODE ===== -->
+  <!-- <script>
 const toggleBtn = document.getElementById("theme-toggle");
 
 toggleBtn.onclick = () => {
   document.body.classList.toggle("dark-mode");
 };
 </script> -->
-<script>
-const toggleBtn = document.getElementById("theme-toggle");
+  <script>
+    const toggleBtn = document.getElementById("theme-toggle");
 
-toggleBtn.onclick = () => {
-  document.body.classList.toggle("dark-mode");
-};
+    toggleBtn.onclick = () => {
+      document.body.classList.toggle("dark-mode");
+    };
 
-// 🔥 TYPING EFFECT
-const text = "Bhanu Sri";
-let index = 0;
-const speed = 100;
+    // 🔥 TYPING EFFECT
+    const text = "Bhanu Sri";
+    let index = 0;
+    const speed = 100;
 
-function typeEffect() {
-  if (index < text.length) {
-    document.getElementById("typing").innerHTML += text.charAt(index);
-    index++;
-    setTimeout(typeEffect, speed);
-  }
-}
+    function typeEffect() {
+      if (index < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, speed);
+      }
+    }
 
-window.onload = typeEffect;
-</script>
+    window.onload = typeEffect;
+  </script>
 
 </body>
+
 </html>
-
-
